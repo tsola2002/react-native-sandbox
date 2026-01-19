@@ -7,7 +7,6 @@ const IntroScreen = () => {
   return (
     <View style={styles.container}>
       <FoodLogo/>
-
       <SunImage style={styles.sunImage}/>
     </View>
   )
