@@ -39,7 +39,7 @@ const signInWithGoogle = () => signInWithPopup(auth, provider);
 const signOutUser = () => signOut(auth);
 
 // Firestore Helpers
-// const postsCollection = collection(db, "posts");
+const postsCollection = collection(db, "posts");
 
 export {
     auth,
