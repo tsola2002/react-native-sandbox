@@ -1,6 +1,5 @@
 import { StyleSheet } from 'react-native';
 
-
 export default StyleSheet.create({
     container: {
         flex: 1,
@@ -8,7 +7,6 @@ export default StyleSheet.create({
         backgroundColor: "#f2e3ba",
         justifyContent: "center",
         alignItems: "center",
-        flex: 1
     },
     box: {
         fontSize: 20,
