@@ -1,22 +1,42 @@
 import react from "react";
 import { StatusBar } from 'expo-status-bar';
-import { View, Text  } from 'react-native';
+import { View, Text, StyleSheet  } from 'react-native';
 // import styles from './style';
 export default function App() {
   return (
-    <View>
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <Text>Header</Text>
+      </View>
 
+      <View style={styles.content}>
+        <View style={styles.sidebar}>
+          <Text>Sidebar</Text>
+        </View>
+
+        <View style={styles.main}>
+          <Text>Main Content</Text>
+        </View>
+
+        
+      </View>
+      <View style={styles.footer}>
+          <Text>Footer</Text>
+      </View>
     </View>
   );
 
-  const styles = StyleSheet.create({
+  
+}
+
+const styles = StyleSheet.create({
     container: {
       flex: 1,
     },
 
     header: {
       flex: 1,
-      backgroundColor: "#ccc",
+      backgroundColor: "#c81616",
       justifyContent: "center",
       alignItems: "center"
     },
@@ -28,7 +48,7 @@ export default function App() {
 
     sidebar: {
       flex: 1,
-      backgroundColor: "#aaa"
+      backgroundColor: "#bbd50f"
     },
 
     main: {
@@ -38,11 +58,12 @@ export default function App() {
 
     footer: {
       flex: 1,
-      backgroundColor: "#ccc",
+      backgroundColor: "#1ea7dd",
       justifyContent: "center",
       alignItems: "center"
     },
   });
-}
+
+
 
 
