@@ -25,7 +25,7 @@ export default function App() {
           }}
         />
         <Text>You Typed: {text}</Text>
-        <Button title="Click Me" onPress={() => alert("Button Pressed")} />
+        <Button  title="Press Me" onPress={() => alert("Button Pressed")}color="green"/>
       </View>       
     
     </>
