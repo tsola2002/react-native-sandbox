@@ -13,6 +13,13 @@ export default function App() {
         <Stack.Screen
           name="Home"
           component={HomeScreen}
+          options={{
+            title: "Dashboard",
+            headerStyle: {
+              backgroundColor: "purple",
+            },
+            headerTintColor: "#fff"
+          }}
         />
 
         <Stack.Screen
