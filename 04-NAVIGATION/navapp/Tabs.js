@@ -22,4 +22,4 @@ const Tabs = () => {
   );
 }
 
-export default tabs
+export default Tabs
