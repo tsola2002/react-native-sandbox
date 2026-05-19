@@ -24,6 +24,7 @@ export default function App() {
           <Text>Footer</Text>
       </View>
     </View>
+    
   );
 
   
