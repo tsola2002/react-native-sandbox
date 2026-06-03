@@ -10,7 +10,7 @@ const CountriesScreen = () => {
 
     const fetchCountries = async () => {
         try {
-            const response = await fetch("https://restcountries.com/v3.1/all");
+            const response = await fetch("https://restcountries.com/v3.1/all?fields=name,capital,flags,population,region,cca3");
             if (!response.ok) {
                 throw new Error(`HTTP Error: ${response.status}`);
             }
