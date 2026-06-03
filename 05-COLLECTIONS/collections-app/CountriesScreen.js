@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { RefreshControl, StyleSheet, View, Text, FlatList, ActivityIndicator, StyleSheet, Image, TextInput } from 'react-native';
+import { RefreshControl, StyleSheet, View, Text, FlatList, ActivityIndicator, Image, TextInput } from 'react-native';
 
 const CountriesScreen = () => {
     const [countries, setCountries] = useState([]);
@@ -10,7 +10,7 @@ const CountriesScreen = () => {
 
     const fetchCountries = async () => {
         try {
-            const response = fetch("https://restCountries.com/v3.1/all");
+            const response = await fetch("https://restcountries.com/v3.1/all");
             const data = await response.json();
             const sortedCountries = data.sort((a, b) =>
                 a.name.common.localeCompare(b.name.common)
@@ -27,7 +27,7 @@ const CountriesScreen = () => {
 
     useEffect(() => {
         fetchCountries();
-    });
+    },[]);
 
     const handleSearch = (text) => {
         setSearch(text);
@@ -98,7 +98,7 @@ const CountriesScreen = () => {
                 data={filteredCountries}
                 keyExtractor={(item) => item.cca3}
                 renderItem={renderCountry}
-                showVerticalScrollIndicator={false}
+                showsVerticalScrollIndicator={false}
                 refreshControl={ 
                     <RefreshControl
                         refreshing={refreshing}
