@@ -6,9 +6,7 @@ export default function App() {
  
 
   return (
-    <View>
-      Countries
-    </View>
+    <CountriesScreen/>
   );
 }
 

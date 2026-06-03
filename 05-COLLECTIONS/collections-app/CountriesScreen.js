@@ -112,4 +112,57 @@ const CountriesScreen = () => {
     );
 }
 
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: "#f5f7fa",
+        paddingHorizontal: 15,
+        paddingTop: 50,
+    },
+    header: {
+        fontSize: 24,
+        fontWeight: "bold",
+        marginBottom: 15,
+    },
+    searchInput: {
+        backgroundColor: "#fff",
+        borderRadius: 12,
+        paddingHorizontal: 15,
+        paddingVertical: 20,
+        marginBottom: 15,
+        elevation: 2,
+    },
+    card: {
+        flexDirection: "row",
+        backgroundColor: "#fff",
+        marginBottom: 12,
+        borderRadius: 12,
+        overflow: "hidden",
+        elevation: 3,
+    },
+    flag: {
+        width: 120,
+        height: 100,
+    },
+    details: {
+        flex: 1,
+        padding: 12,
+        justifyContent: "center",
+    },
+    countryName: {
+        fontSize: 18,
+        fontWeight: "bold",
+        marginBottom: 6,
+    },
+    info: {
+        color: "#555",
+        marginBottom: 2,
+    },
+    loaderContainer: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+    },
+});
+
 export default CountriesScreen
