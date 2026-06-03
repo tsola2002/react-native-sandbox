@@ -8,9 +8,10 @@ const Drawer = createDrawerNavigator();
 const DrawerNav = () => {
   return (
     <Drawer.Navigator>
-          <Drawer.Screen name="Dashboard" component={Tabs}>
-              
-          </Drawer.Screen>
+          <Drawer.Screen
+              name="Dashboard"
+              component={Tabs}
+          />
     </Drawer.Navigator>
   )
 }

@@ -5,8 +5,9 @@ import { StyleSheet, Text, View } from "react-native";
 import HomeScreen from "./HomeScreen";
 import ProfileScreen from "./ProfileScreen";
 import Tabs from "./Tabs";
+import DrawerNav from "./DrawerNav";
 
-const Stack = createNativeStackNavigator();
+// const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
@@ -28,7 +29,8 @@ export default function App() {
           component={ProfileScreen}
         />
       </Stack.Navigator> */}
-      <Tabs />
+      {/* <Tabs /> */}
+      <DrawerNav />
     </NavigationContainer>
   );
 }
