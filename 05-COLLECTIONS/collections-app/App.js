@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, FlatList } from "react-native";
+import CountriesScreen from "./CountriesScreen";
 
 
 export default function App() {

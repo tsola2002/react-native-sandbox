@@ -1,7 +1,5 @@
-import { View, Text, ActivityIndicator } from 'react-native'
-import React, { useEffect } from 'react'
-import { TextInput } from 'react-native-web';
-import { RefreshControl } from 'react-native';
+import React, { useEffect, useState } from 'react'
+import { RefreshControl, StyleSheet, View, Text, FlatList, ActivityIndicator, StyleSheet, Image, TextInput } from 'react-native';
 
 const CountriesScreen = () => {
     const [countries, setCountries] = useState([]);
