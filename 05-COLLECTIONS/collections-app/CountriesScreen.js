@@ -11,6 +11,9 @@ const CountriesScreen = () => {
     const fetchCountries = async () => {
         try {
             const response = await fetch("https://restcountries.com/v3.1/all");
+            if (!response.ok) {
+                throw new Error(`HTTP Error: ${response.status}`);
+            }
             const data = await response.json();
             const sortedCountries = data.sort((a, b) =>
                 a.name.common.localeCompare(b.name.common)
