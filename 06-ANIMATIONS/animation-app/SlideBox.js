@@ -4,7 +4,6 @@ import {React, useRef,  useEffect } from 'react'
 const SlideBox = () => {
     const position = useRef(new Animated.Value(-200)).current;
 
-
     useEffect(() => {
         Animated.timing(position, {
             toValue: 0,
