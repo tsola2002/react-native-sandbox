@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     color: colors.text,
   },
   subText: {
-    color: color.gray,
+    color: colors.gray,
     marrginTop: 4,
   },
   avatar: {
