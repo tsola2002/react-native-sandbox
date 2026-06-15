@@ -20,4 +20,25 @@ const Header = () => {
 
 export default Header
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    container: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        marginBottom: 20,
+    },
+    greeting: {
+       fontSize: 22,
+       fontWeight: "700",
+       color: colors.text, 
+    },
+    subText: {
+        color: colors.gray,
+        marginTop: 4,
+    },
+    avatar: {
+        width: 45,
+        height: 45,
+        borderRadius: 25,
+    },
+})
