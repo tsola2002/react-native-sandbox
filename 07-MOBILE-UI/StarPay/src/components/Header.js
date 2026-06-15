@@ -5,15 +5,14 @@ import colors from "../constants/colors";
 const Header = () => {
   return (
     <View style={styles.container}>
-
-        <Image source={require("../../assets/images/avatar.png")} style={ styles.avatar} />
-          
-      <View>
-        <Text style={styles.greeting}>Good Evening</Text>
-        <Text style={styles.subText}>Nicolas Smith</Text>      
+      <View style={styles.leftSection}>
+        <Image source={require("../../assets/images/avatar.png")} style={styles.avatar} />
+        <View>
+          <Text style={styles.greeting}>Good Evening</Text>
+          <Text style={styles.subText}>Nicolas Smith</Text>
+        </View>
       </View>
-          
-
+      <Text style={styles.bell}>🔔</Text>
     </View>
   )
 }
@@ -26,19 +25,31 @@ const styles = StyleSheet.create({
         marginTop: 40,
         alignItems: "center",
         marginBottom: 20,
+        justifyContent: "space-between",
+    },
+    leftSection: {
+        flexDirection: "row",
+        alignItems: "center",
+        flex: 1,
     },
     greeting: {
-       fontSize: 22,
-       fontWeight: "700",
-       color: colors.text, 
+       fontSize: 14,
+       fontWeight: "400",
+       color: colors.gray,
     },
     subText: {
-        color: colors.gray,
+        color: colors.text,
         marginTop: 4,
+        fontSize: 16,
+        fontWeight: "600",
     },
     avatar: {
         width: 45,
         height: 45,
         borderRadius: 25,
+        marginRight: 12,
+    },
+    bell: {
+        fontSize: 24,
     },
 })
