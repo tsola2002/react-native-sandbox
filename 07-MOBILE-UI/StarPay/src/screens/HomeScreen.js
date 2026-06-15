@@ -17,6 +17,20 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     backgroundColor: colors.background,
+  },
+  greeting: {
+    fontSize: 22,
+    fontWeight: "700",
+    color: colors.text,
+  },
+  subText: {
+    color: color.gray,
+    marrginTop: 4,
+  },
+  avatar: {
+    width: 45,
+    height: 45,
+    borderRadius:25,
   }
 });
 
