@@ -7,7 +7,6 @@ const HomeScreen = () => {
   return (
     <View style={styles.container}>
       <Header />
-      <Text>HomeScreen</Text>
     </View>
   )
 }
