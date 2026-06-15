@@ -23,7 +23,7 @@ export default Header
 const styles = StyleSheet.create({
     container: {
         flexDirection: "row",
-        justifyContent: "space-between",
+        marginTop: 40,
         alignItems: "center",
         marginBottom: 20,
     },
