@@ -1,6 +1,8 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import colors from '../constants/colors';
+import EyeIcon from "../../assets/icons/eye-icon.svg";
+import VisaIcon from "../../assets/icons/visa-icon.svg";
 
 const Card = ({ card }) => {
   const isDebit = card.type === 'Debit Card';
@@ -8,7 +10,7 @@ const Card = ({ card }) => {
   return (
     <View style={[styles.container, { backgroundColor: card.bgColor }]}>
       <View style={styles.header}>
-        <Text style={[styles.cardType, { color: card.textColor }]}>
+        <Text style={[styles.cardType, { color: card.text }]}>
           {card.type}
         </Text>
       </View>
@@ -18,22 +20,23 @@ const Card = ({ card }) => {
           <Text style={[styles.label, { color: card.textColor }]}>
             {isDebit ? 'Total Balance' : 'Total Limit'}
           </Text>
-          <Text style={[styles.amount, { color: card.textColor }]}>
+          <Text style={[styles.amount, { color: card.text }]}>
             ${isDebit ? card.balance : card.limit}
           </Text>
         </View>
         {isDebit && (
           <View style={styles.icon}>
-            <Text style={styles.iconText}>👁</Text>
+            <EyeIcon width={24} height={24} color={card.textColor} />
           </View>
         )}
       </View>
 
       <View style={styles.footer}>
-        <View>
-          <Text style={[styles.provider, { color: card.textColor }]}>
-            {card.provider}
-          </Text>
+        <View style={styles.sideLoad}>
+          <VisaIcon
+            width={50}
+            height={20}
+          />
           <Text style={[styles.cardNumber, { color: card.textColor }]}>
             {card.cardNumber}
           </Text>
@@ -62,6 +65,7 @@ const styles = StyleSheet.create({
   cardType: {
     fontSize: 16,
     fontWeight: '600',
+    fontFamily: "Poppins",  
   },
   content: {
     flexDirection: 'row',
@@ -73,10 +77,12 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: '500',
     marginBottom: 4,
+    fontFamily: "Poppins", 
   },
   amount: {
     fontSize: 28,
-    fontWeight: '700',
+    fontWeight: '600',
+    fontFamily: "Poppins", 
   },
   icon: {
     justifyContent: 'center',
@@ -111,6 +117,10 @@ const styles = StyleSheet.create({
     height: 24,
     borderRadius: 12,
     backgroundColor: colors.white,
+  },
+  sideLoad: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
 });
 

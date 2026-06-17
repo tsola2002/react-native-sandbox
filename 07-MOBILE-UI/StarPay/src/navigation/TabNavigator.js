@@ -6,6 +6,10 @@ import CardsScreen from '../screens/CardsScreen';
 import HomeScreen from '../screens/HomeScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import colors from '../constants/colors';
+import HomeIcon from "../../assets/icons/home-icon.svg";
+import WalletIcon from "../../assets/icons/wallet-icon.svg";
+import StatIcon from "../../assets/icons/stat-icon.svg";
+import ProfileIcon from "../../assets/icons/profile-icon.svg";
 
 const Tab = createBottomTabNavigator();
 
@@ -14,43 +18,61 @@ const TabNavigator = () => {
     <Tab.Navigator
       screenOptions={({ route }) => ({
         headerShown: false,
-        tabBarIcon: ({ focused }) => {
-          let icon = '';
-          if (route.name === 'Home') icon = '🏠';
-          else if (route.name === 'Stats') icon = '📊';
-          else if (route.name === 'Wallet') icon = '💳';
-          else if (route.name === 'Profile') icon = '👤';
+        tabBarShowLabel: false,
 
-          return <Text style={{ fontSize: 20 }}>{icon}</Text>;
-        },
-        tabBarLabel: ({ focused }) => {
-          const labels = {
-            Home: 'Home',
-            Stats: 'Statistics',
-            Wallet: 'Wallet',
-            Profile: 'Profile',
-          };
-          return (
-            <Text style={{
-              fontSize: 11,
-              fontWeight: '500',
-              color: focused ? colors.text : colors.gray,
-              marginTop: 4,
-            }}>
-              {labels[route.name]}
-            </Text>
-          );
-        },
         tabBarStyle: {
-          backgroundColor: colors.background,
-          borderTopColor: colors.lightGray,
-          borderTopWidth: 1,
-          paddingTop: 8,
-          paddingBottom: 16,
-          height: 70,
+          height: 75,
+          backgroundColor: "#FFFFFF",
+          borderTopWidth: 0,
+          elevation: 8,
+          shadowOpacity: 0.08,
         },
-        tabBarActiveTintColor: colors.text,
-        tabBarInactiveTintColor: colors.gray,
+
+        tabBarIcon: ({ focused }) => {
+          const iconColor = focused ? "#181D31" : "#A7AEC1";
+          const iconSize = 24;
+
+          switch (route.name) {
+            case "Home":
+              return (
+                <HomeIcon
+                  width={iconSize}
+                  height={iconSize}
+                  color={iconColor}
+                />
+              );
+
+            case "Wallet":
+              return (
+                <WalletIcon
+                  width={iconSize}
+                  height={iconSize}
+                  color={iconColor}
+                />
+              );
+
+            case "Stats":
+              return (
+                <StatIcon
+                  width={iconSize}
+                  height={iconSize}
+                  color={iconColor}
+                />
+              );
+
+            case "Profile":
+              return (
+                <ProfileIcon
+                  width={iconSize}
+                  height={iconSize}
+                  color={iconColor}
+                />
+              );
+
+            default:
+              return null;
+          }
+        },
       })}
     >
       <Tab.Screen name="Home" component={HomeScreen} />

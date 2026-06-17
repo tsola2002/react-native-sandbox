@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
 import colors from "../constants/colors";
+import BellIcon from "../../assets/icons/bell-icon.svg";
 
 const Header = () => {
   return (
@@ -12,7 +13,7 @@ const Header = () => {
           <Text style={styles.subText}>Nicolas Smith</Text>
         </View>
       </View>
-      <Text style={styles.bell}>🔔</Text>
+      <BellIcon width={24} height={24} color={colors.text} />
     </View>
   )
 }
@@ -35,12 +36,14 @@ const styles = StyleSheet.create({
     greeting: {
        fontSize: 14,
        fontWeight: "400",
+       fontFamily: "Poppins",
        color: colors.gray,
     },
     subText: {
         color: colors.text,
         marginTop: 4,
         fontSize: 16,
+        fontFamily: "PoppinsBold",
         fontWeight: "600",
     },
     avatar: {
