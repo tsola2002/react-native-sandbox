@@ -1,17 +1,21 @@
+import CardIcon from "../../assets/icons/card-icon.svg";
+import CoffeeIcon from "../../assets/icons/coffee-icon.svg";
+
+
 export const transactionsData = [
   {
     id: 1,
     title: 'Transfer to Siti',
     time: 'Today, 08:23 PM',
     amount: -326,
-    icon: '📤',
+    icon: <CardIcon />,
   },
   {
     id: 2,
     title: 'Coffee',
     time: 'Yesterday, 02:51 PM',
     amount: -22,
-    icon: '☕',
+    icon: <CoffeeIcon />,
   },
 ];
 
