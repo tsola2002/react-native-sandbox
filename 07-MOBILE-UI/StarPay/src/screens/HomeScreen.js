@@ -65,10 +65,12 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '600',
     color: colors.text,
+    fontFamily: "Poppins",
   },
   seeAll: {
     fontSize: 12,
-    fontWeight: '500',
+    fontWeight: '600',
+    fontFamily: "Poppins",
     color: colors.gray,
   },
   contactsScroll: {

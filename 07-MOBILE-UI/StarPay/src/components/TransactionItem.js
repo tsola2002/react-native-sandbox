@@ -44,17 +44,21 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 14,
+    fontFamily: "Poppins",
     fontWeight: '600',
     color: colors.text,
     marginBottom: 4,
   },
   time: {
     fontSize: 12,
+    fontFamily: "Poppins",
     color: colors.gray,
   },
   amount: {
     fontSize: 14,
     fontWeight: '600',
+    fontFamily: "Poppins",
+    color: colors.danger,
   },
 });
 

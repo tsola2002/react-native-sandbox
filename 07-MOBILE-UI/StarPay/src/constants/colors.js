@@ -7,5 +7,5 @@ export default {
     gray: "#9CA2BA",
     lightGray: "#e5e7eb",
     success: "#1db954",
-    danger: "#e63946",
+    danger: "#EF6F67",
 }
