@@ -10,6 +10,7 @@ import HomeIcon from "../../assets/icons/home-icon.svg";
 import WalletIcon from "../../assets/icons/wallet-icon.svg";
 import StatIcon from "../../assets/icons/stat-icon.svg";
 import ProfileIcon from "../../assets/icons/profile-icon.svg";
+import CustomersScreen from '../screens/CustomersScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -76,7 +77,7 @@ const TabNavigator = () => {
       })}
     >
       <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Stats" component={StatsScreen} />
+      <Tab.Screen name="Stats" component={CustomersScreen} />
       <Tab.Screen name="Wallet" component={CardsScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
     </Tab.Navigator>

@@ -39,21 +39,27 @@ export default function CustomersScreen() {
   }, []);
 
   // Handle submit (Create or Update)
-  const handleSubmit = async () => {
-    if (!form.fullName || !form.email) {
-      Alert.alert("Validation", "Name and Email are required");
-      return;
-    }
+    const handleSubmit = async () => {
+        try {
+            if (!form.fullName || !form.email) {
+            Alert.alert("Validation", "Name and Email are required");
+            return;
+            }
 
-    if (editingId) {
-      await updateCustomer(editingId, form);
-      setEditingId(null);
-    } else {
-      await addCustomer(form);
-    }
+            if (editingId) {
+            await updateCustomer(editingId, form);
+            setEditingId(null);
+            } else {
+            await addCustomer(form);
+            }
 
-    setForm({ fullName: "", email: "", phone: "", accountBalance: "" });
-    loadCustomers();
+            setForm({ fullName: "", email: "", phone: "", accountBalance: "" });
+            loadCustomers();
+
+        } catch(error) {
+            console.log(error);
+        }
+    
   };
 
   // Edit
@@ -152,7 +158,13 @@ export default function CustomersScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 10 },
+    container: {
+        flex: 1,
+        paddingTop: 70,
+        paddingBottom: 10,
+        paddingLeft: 10,
+        paddingRight: 10,
+    },
   form: { marginBottom: 20 },
 
   input: {
