@@ -1,36 +1,24 @@
 import react from "react";
 import { StatusBar } from 'expo-status-bar';
 import { View, Text, StyleSheet  } from 'react-native';
-// import styles from './style';
+import styles from './style';
 export default function App() {
   return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <Text>Header</Text>
+    <View style={styles.wrapper}>
+      <View style={[styles.col, styles.col1]}>
+        <Text>Column 1</Text>
       </View>
-
-      <View style={styles.content}>
-        <View style={styles.sidebar}>
-          <Text>Sidebar</Text>
-        </View>
-
-        <View style={styles.main}>
-          <Text>Main Content</Text>
-        </View>
-
-        
+      <View style={[styles.col, styles.col2]}>
+        <Text>Column 2</Text>
       </View>
-      <View style={styles.footer}>
-          <Text>Footer</Text>
+      <View style={[styles.col, styles.col3]}>
+        <Text>Column 3</Text>
       </View>
-    </View>
-    
-  );
-
-  
+    </View>   
+  );  
 }
 
-const styles = StyleSheet.create({
+
     container: {
       flex: 1,
     },
