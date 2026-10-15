@@ -1,5 +1,8 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import colors from '../constants/colors';
+import EyeIcon from "../../assets/icons/eye-icon.svg";
+import VisaIcon from "../../assets/icons/visa-icon.svg";
 
 const Card = ({ card }) => {
     const isDebit = card.type === 'Debit Card';
@@ -24,14 +27,14 @@ const Card = ({ card }) => {
                 </View>
                 {isDebit && (
                     <View style={styles.icon}>
-                        <EyeIcon width={24} height={24} color={color.textColor} />
+                        <EyeIcon width={24} height={24} color={colors.textColor} />
                     </View>
                 )}
             </View>
 
-            {/* Footer Content     */}
+            {/* Footer Content */}
             <View style={styles.footer}>
-                <View style={styles.sideload}> </View>
+                <View style={styles.sideload}></View>
                 <VisaIcon width={50} height={20} />
                 <Text style={[styles.cardNumber, { color: card.textColor }]}>
                     {card.cardNumber}

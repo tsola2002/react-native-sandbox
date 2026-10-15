@@ -5,7 +5,7 @@ export const cardsData = [
         balance: 41000,
         cardNumber: '12/05',
         provider: 'VISA',
-        bgColor: '#5a4a7a',
+        bgColor: '#E8D9EC',
     },
     {
         id: 2,
@@ -13,6 +13,6 @@ export const cardsData = [
         balance: 37000,
         cardNumber: '12/05',
         provider: 'VISA',
-        bgColor: '#8b5a3c',
+        bgColor: '#FBAE84',
     }
 ];

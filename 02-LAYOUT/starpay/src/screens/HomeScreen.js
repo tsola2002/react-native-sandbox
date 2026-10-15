@@ -3,15 +3,16 @@ import React from 'react'
 import Header from '../components/Header'
 import Card from '../components/Card';
 import { cardsData } from '../data/cards';
-import { colors } from '../constants/colors';
+import colors from '../constants/colors';
+
 
 const HomeScreen = () => {
   return (
-    <ScrollView styles={styles.container} showsVerticalScrollIndicator={false}>
+    <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
       <Header />
 
       {/* Card Section */}
-      <View style={styles.cardSection}>
+      <View style={styles.cardsSection}>
         {cardsData.map((card) => (
           <Card key={card.id} card={card} />
         ))}

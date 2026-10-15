@@ -8,4 +8,5 @@ export default {
     lightGray: "#e5e7eb",
     success: "#1db954",
     danger: "#EF6F67",
+    purple: "#e8d9dc"
 }
