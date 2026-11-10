@@ -5,8 +5,8 @@ import ScaleBox from './ScaleBox';
 
 export default function App() {
   return (
-    // <FadeInBox />
-    <ScaleBox />
+    <FadeInBox />
+    // <ScaleBox />
   );
 }
 
