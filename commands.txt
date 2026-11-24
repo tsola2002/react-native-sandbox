@@ -1,5 +1,6 @@
 // this will create a new react native app
-npx create-expo-app@latest navigation --template blank
+
+
 
 // this will run your react application
-npx expo start
+npx expo startnpx create-expo-app@latest navigation --template blank 
